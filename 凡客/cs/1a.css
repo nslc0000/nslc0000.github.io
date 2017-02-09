@@ -1,0 +1,595 @@
+h1,h2,h3,h4,h5,h6,p,ol,li,ul,pre,body{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-family: "宋体";
+	font-size: 12px;
+	border: 0;
+}
+a{
+	text-decoration: none;
+}
+	.aa,.bb,.cc,.dd{
+		width: 285px;height: 438px;
+		float: left;
+	}
+	.one{
+		width: 1200px; height:438px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.aa{
+		margin-right: 20px;
+		background: url(../tp/1.jpg);
+
+	}
+	.bb{
+		margin-right: 20px;
+		background: url(../tp/1.jpg)-305px 0;
+	}
+	.cc{
+		margin-right:20px;
+	    background: url(../tp/1.jpg)-610px 0;
+	}
+	.dd{
+		background: url(../tp/1.jpg)-915px 0;
+	}
+	.two{
+		width: 1200px;height: 69px;
+		margin: 0 auto;
+	}
+	.kk1{
+		width: 283px;height: 68px;
+         border: 1px solid #ccc;
+         border-top: none;
+         float: left;
+         margin-right: 20px;
+	}
+	.kk{
+		width: 283px;height: 68px;
+         border: 1px solid #ccc;
+         border-top: none;
+         float: left;
+	}
+	.q{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: left;
+        padding-left: 10px;
+	}
+	.w{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: right;
+        padding-right: 10px;
+	}
+	.e{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: left;
+       padding-left: 10px;
+	}.r{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: right;
+        padding-right: 10px;
+	}.a{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: left;
+       padding-left: 10px;
+	}.s{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: right;
+        padding-right: 10px;
+	}.d{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: left;
+        padding-left: 10px;
+	}.f{
+		width:100px ;height: 68px;
+        line-height: 68px;
+        float: right;
+        padding-right: 10px;
+	}
+	.w,.r,.s,.f{
+		color: rgb(255,0,0);
+	}
+	.list{
+		width: 1200px;height: 510px;
+		margin: 0 auto;
+        margin-bottom: 16px;
+	}
+	.list1{
+		width: 590px;height: 440px;
+	}
+	.list2{
+		width: 588px;height: 70px;
+		border: 1px solid #e8e7ec;
+		border-top:none;
+	}
+	.txt1{
+		width: 200px;height: 70px;
+		padding-left: 10px;
+		line-height: 70px;
+		float: left;
+	}
+	.txt2{
+		height: 70px;
+        padding-right: 10px;
+		line-height: 70px;
+		float: right;
+	}
+	.txt3{
+		text-decoration:none;
+		margin-right: 0px;
+		color: rgb(255,0,0);
+	}
+	.lis1{
+		float: left;
+		margin-right: 20px;
+	}
+	.lis2{
+		width: 290px;height: 510px;
+	    float: left;	
+	}
+	.box{
+		width: 290px;height: 235px;
+		border-bottom: 30px;
+	}
+	.box1{
+		width: 290px;height: 180px;
+	}
+    .box2{
+    	width: 288px;height: 55px;
+    	border: 1px #e8e7ec solid;
+    	border-top: none;
+    }
+    .box11{
+    	padding-left: 10px;
+    	height: 53px;
+    	line-height: 53px;
+    	float: left;
+    }
+    .box22{
+    	padding-right: 10px;
+    	height: 53px;
+    	line-height: 53px;
+    	float: right;
+    }
+    .box222{
+		text-decoration:none;
+		margin-right: 0px;
+		color: rgb(255,0,0);
+	}
+    .bos{
+		width: 290px;height: 255px;
+		margin-top: 30px;
+	}
+	.bos1{
+		width: 290px;height: 175px;
+	}
+    .bos2{
+    	width: 288px;height: 70px;
+    	border: 1px #e8e7ec solid;
+    	border-top: none;
+    }
+    .bos11{
+    	padding-left: 10px;
+    	height: 68px;
+    	line-height: 68px;
+    	float: left;
+    }
+    .bos22{
+    	padding-right: 10px;
+    	height: 68px;
+    	line-height: 68px;
+    	float: right;
+    }
+    .bos222{
+		text-decoration:none;
+		margin-right: 0px;
+		color: rgb(255,0,0);
+	}
+ 	.lis3{
+		width: 286px;height: 510px;
+	    float:right;
+	}
+	.boxx{
+		width: 286px;height: 440px;
+	}
+
+	.boxx2{
+		width: 284px;height: 70px;
+		border: 1px solid #e8e7ec;
+		border-top:none;
+	}
+	.boxx1{
+		width: 140px;height: 70px;
+		padding-left: 10px;
+		line-height: 70px;
+		float: left;
+	}
+	.boxx3{
+		height: 70px;
+        padding-right: 10px;
+		line-height: 70px;
+		float: right;
+	}
+	.zero{
+		text-decoration:none;
+		margin-right: 0px;
+		color: rgb(255,0,0);
+	}
+	.diyi{
+		width: 100%;height:31px;
+		background: #f7f7f7;
+		margin-bottom: 2px;
+	}
+	.a1{
+		width: 1200px;height: 31px;
+		margin: 0 auto;
+	}
+	.a2{
+		width: 440px;height: 31px;
+        float: right;
+	}
+	.a3{
+		width: 144px;height: 31px;
+        line-height: 31px;
+        float: left;
+	}
+    .a4{
+    	width: 88px; height: 100%;
+    	line-height: 31px;
+    	float: left;
+    	color: #727171;
+    }
+    .aa2{
+    	width: 56px;height: 100%;
+    	float: left;
+    	line-height: 31px;
+    	padding:0 4px;
+    }
+    .aa3{
+    	width:66px;height: 100%;
+    	float:left;
+    	line-height: 31px;
+    	padding-left: 30px;
+    	background: url(../tp/5.jpg) no-repeat;
+    }
+    .aa4{
+    	width:48px;height: 100%;
+    	float: right;
+    	background: url(../tp/6.jpg) -80px 0px no-repeat;
+    }
+	.xixian{
+		width: 100%;height: 1px;
+		background: #ccc;
+		margin-bottom: 2px;
+	}
+	.ss1{
+		width: 1200px;height: 82px;
+		margin: 0 auto;
+	}
+	.ss2{
+		width: 440px;height: 82px;
+		float: right;
+	}
+	.ss3{
+		width: 440px;height:30px;
+		margin-top: 22px;
+	}
+	.ss4{
+		width: 420px;height: 18px;
+		margin-left: 14px;
+		padding-top: 12px; 
+		color: #727171;
+	}
+	.sss1{
+		width: 310px;height: 30px;
+		float: left;
+    }
+    .sss2{
+    	width: 108px;height: 30px;
+    	float: right;
+    	background: #b81b22;
+    	
+    }
+    .sss3{
+         width: 74px;height: 30px;
+         line-height: 30px;
+         padding-left: 34px;
+         background: #b81b22;
+         background:url(../tp/7.jpg) no-repeat;
+         color: #fff;
+    }
+    .sss3:hover{
+    		width: 108px;height: 30px;
+    		background:url(../tp/8.jpg) no-repeat;
+    		cursor: pointer;
+    		background-color: #bbb;
+    		color:#b91c23;
+    	}
+    #inp{
+    	width: 260px;height: 26px;
+     	border: 1px solid #ccc;
+        color: #ddd;
+    }
+    #bb{
+    	width: 46px;height: 30px;
+    	border: 1px solid #ccc;
+    	border-left: none;
+    	background: #b71c22;
+    	cursor: pointer;
+    	color: #fff;
+    }
+    .ss5{
+    	float: right;width: 360px;
+    	height: 30px;
+    }
+    #sd{
+    	margin-left:5px;
+    	color: #727171;
+    }
+    .dh{
+    	width: 1200px;height:56px;
+    	margin: 0 auto; 
+    	margin-bottom: 30px;
+    }
+    .dhic{
+    	width:202px;height: 56px; 
+    	float: left;
+    }
+    .dhic img{
+    	width:202px;height: 56px; 
+    }
+    .dhlist{
+    	width: 998px;height: 18px;
+    	margin-top: 38px;
+    	float: left;
+    }
+    .dhlis{
+           width: 98px;float: left;
+           height: 18px;
+           border-right: 1px solid #888;
+           font-size: 18px;
+           text-align: center;
+           color: #888;
+    }
+    #dh{
+    	color: #888;
+    }
+    .di{
+    	width: 1198px;height: 282px;
+    	margin:0 auto;
+    	margin-top: 52px;
+    	border: 1px solid #ccc;
+    }
+    .di1{
+    	width: 1112px; height: 140px;
+    	margin:0 auto;
+    	margin-top: 34px;
+    }
+    
+    .did{
+    	width: 370px; height: 140px;
+    	border-right: 1px solid #ccc;
+    	float: left;
+    }
+    .did1{
+    	width: 40px;height: 42px;
+    	margin:0 auto;
+    	margin-top: 15px;
+    }
+    .did2{
+    	width: 156px;height: 32px;
+    	margin: 0 auto;
+    	margin-top: 30px;
+    	background: #b81c22;
+    	line-height: 32px;
+    	text-align: center;
+    	color: #fff;
+    	font-size: 14px;
+    }
+    .did3{
+    	width: 42px;height: 42px;
+    	margin:0 auto;
+    	margin-top: 14px;
+    }
+    .did4{
+    	width: 130px;height: 14px;
+    	margin: 0 auto;
+    	margin-top: 24px;
+    	text-align: center;
+    	color: #727171;
+    	font-size: 14px;
+    }
+    .did5{
+    	width: 130px;height: 14px;
+    	margin: 0 auto;
+    	margin-top: 12px;
+    	text-align: center;
+    	color: #727171;
+    	font-size: 14px;
+    }
+    .did6{
+    	width: 99px;height: 99px;
+    	margin:0 auto;
+    	margin-top: 4px;
+    }
+    .did7{
+    	width: 135px;height: 14px;
+    	margin:0 auto;
+    	margin-top: 20px;
+    	text-align: center;
+    	color: #727171;
+    	font-size: 14px;
+    }
+    #did8{
+    	color: red;
+    }
+    .di2{
+    	width: 1115px;height: 58px;
+    	background: #f8f8f8;
+    	margin:0 auto;
+    	margin-top: 24px;
+    }
+    .dii{
+    	width: 185px;height: 58px;
+    	border-right: 1px solid #ccc;
+    	float: left;
+    	text-align: center;
+    	line-height: 58px;
+    }
+    .dii a{
+    	color: #323232;
+    }
+   
+    .xx{
+        width: 100%;height: 1px;
+        min-width: 1200px;background: #3e3a39;
+        margin-top: 14px;
+    }
+    .xix1{
+        width: 832px;height: 12px;
+        margin: 0 auto;
+        margin-top: 12px;
+        text-align: center;
+        color: #3e3a39;
+    }
+    .xix2{
+        width: 832px;height: 12px;
+        margin: 0 auto;
+        margin-top: 12px;
+        text-align: center;
+        color: #3e3a39;
+    }
+    
+     .ban{
+        width: 1200px;height: 576px;
+        margin: 0 auto;
+        background: red;
+        margin-bottom: 40px;
+        position: relative; 
+    }
+    .yq{
+        width: 142px;height: 16px;
+        position: absolute;
+        left:530px;bottom: 22px;
+    }
+    .yq1{
+        width: 16px;height: 16px;
+        float: left;
+        background: #ddd;
+        margin-right: 5px;
+        border-radius: 50%
+    }
+    .yq1:hover{
+     background: red;
+     cursor: pointer;
+    }
+    .jian1{
+        width: 60px;height: 60px;
+        position: absolute;
+        left: -4px;bottom:258px; 
+    }
+    .jian2{
+        width: 60px;height: 60px;
+        position: absolute;
+        right: -4px;bottom:258px; 
+    }
+    .chongzhi{
+        width: 1200px;height: 42px;
+        margin: 0 auto;
+        background: red;
+        margin-bottom: 64px;
+    }
+    .chongzhi1{
+        width: 400px;height: 42px;
+        float: left;
+        text-align: center;
+        font-size: 26px;
+        line-height: 42px;
+    }
+    #chongzhi1{
+        color: #f2d7d1;
+        margin-left:50px;
+    }
+    #chongzhi3{
+        color: #f2d7d1;
+        margin-right:50px;
+    } #chongzhi2{
+        color: #d00000;
+    }
+    .wuyong{
+        width: 100px;height: 20px;
+        margin: 0 auto;
+        font-size: 20px;
+        text-align: center;
+        color: #9a9a9a;
+        margin-bottom: 44px;
+    }
+    .jingx{
+        width: 1200px;height: 40px;
+        margin:0 auto;
+        background: #d00000;
+        font-size: 22px;
+        text-align: center;
+        line-height: 40px;
+        color: #fdf6f1;
+        margin-bottom: 20px;
+        margin-top: 36px;
+    }
+    .two a{
+        color:red;
+    }
+    .bottom1 .logo1{
+        width: 112px;height: 40px;margin-top: 4px;background: url(../tp/3.png) 0 -582px;display: block;float: left;
+    }
+    .bottom1 .logo2{
+        width: 156px;height: 45px;background: url(../tp/3.png) 0 -629px;display: block;float: left;margin-left: 21px;
+    }
+    .bottom1 .logo3{
+        width: 96px;height: 42px;background:url(../tp/3.png) 0 -675px;display: block;float: left;margin-left: 20px;margin-top: 4px;
+    }
+    .bottom1 .logo4{
+       width: 96px;height: 42px;background: url(../tp/3.png) -98px -675px;display: block;float: left;margin-left: 20px;margin-top: 4px;
+    }
+    .bottom1 .logo5{
+       width: 42px;height: 42px;background: url(../tp/3.png) -202px -675px;display: block;float: left;margin-left: 24px;margin-top: 3px;
+    }
+    .bottom1 .logo6{
+        width: 121px;height: 39px;background: url(../tp/4.png);display: block;float: left;margin-left: 20px;margin-top: 6px;
+    }
+    .bottom1{
+        width: 734px;height: 48px;
+        margin: 0 auto;
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+    .right{
+        width: 75px;height: 176px;
+        position: absolute;
+        right:15px;bottom: 25px;
+        position: fixed;
+    }
+    .rig1{
+        width: 73px;height: 68px;
+        border: 1px solid #b81b22;
+        background: url(../tp/rig.png);
+    }
+    .rig2{
+        width: 73px;height: 68px;
+        border: 1px solid #b81b22;
+        border-bottom: none;
+        border-top: none;
+        background: url(../tp/rig.png) 0 -80px;
+    }
+    .rig3{
+        width: 73px;height:38px;
+        border: 1px solid #b81b22;
+        background: url(../tp/rig.png) 0 -160px;
+    }
