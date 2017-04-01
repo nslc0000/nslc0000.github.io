@@ -67,7 +67,7 @@ window.onload=function () {
             newbool[0].style.height="0";
         }
 
-    }
+    };
     window.addEventListener("scroll",function () {
          for(let i=0;i<newbool1.length;i++) {
              if ((num5[i]<=dbi.scrollTop)&&(num5[i+1]>dbi.scrollTop)){
@@ -81,7 +81,7 @@ window.onload=function () {
               newbool1[6].style.background=newcolor1[6]
           newbool1[5].style.background="rgba(0,0,0,0.5)"
          }}
-         })
+         });
 
     for(let i=0;i<newbool1.length;i++){
         newbool1[i].onclick=function () {
@@ -98,9 +98,6 @@ window.onload=function () {
         newbool1[i].style.background=newcolor[i];
     })
     }
-
-
-
 
  //结束
 };

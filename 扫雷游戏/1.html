@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="1.js"></script>
+    <style>
+        *{box-sizing: border-box}
+        .box{
+            width: 601px;height: 601px;
+            margin: 0 auto;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        .kuai{
+            width: 60px;height: 60px;
+            border-bottom: 1px solid #000;
+            float: left;
+            background: #ccc;
+            border-right: 1px solid #000;
+        }
+        .show{
+            background: url(img/1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .n{
+            line-height: 60px;
+            text-align: center;
+            background: #fff;
+        }
+        .flag{
+            background:url(img/2.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+</body>
+<script>
+    do{
+    $(".box").empty();
+    for(let i=0;i<10;i++){
+        for(let j=0;j<10;j++){
+         var lei=Math.random()>0.9;
+        $("<div></div>")
+                .addClass(function () {
+                    if(lei){
+                        return "kuai lei"
+                    }else {
+                        return "kuai"
+                    }
+                })
+                .attr("id",`${i}-${j}`)
+                .appendTo(".box")
+                .data("pos",{x:i,y:j})
+                .mousedown(mousedd)
+        }
+    }
+    }while($(".lei").length!=10);
+    function mousedd(e) {
+        if(e.which==1){
+            left.call(this);
+        }
+        else if(e.which==3){
+            right.call(this);
+        }
+    }
+   function left() {
+       if($(this).hasClass("lei")){
+           $(".lei").addClass("show");
+           alert("GAME OVER");
+           location.replace(document.referrer);
+       }else if($(this).hasClass("flag")){
+           return;
+       }else{
+           var pos=$(this).data("pos");
+           var num=0;
+           for(var i=pos.x-1;i<=pos.x+1;i++){
+               for(var j=pos.y-1;j<=pos.y+1;j++){
+                   if($(`#${i}-${j}`).hasClass("lei")){
+                       num++;
+                   }
+               }
+           }
+           $(this).text(num).addClass("n");
+           if(num==0){
+               for(var i=pos.x-1;i<=pos.x+1;i++){
+                   for(var j=pos.y-1;j<=pos.y+1;j++){
+                       var obj=$(`#${i}-${j}`);
+                       if(obj.hasClass("kuai")){
+                          if(!obj.data("cc")){
+                              obj.data("cc",true);
+                             left.call(obj);
+                          }
+                       }
+                   }
+               }
+           }
+       }
+   }
+   var nu=$(".lei").length;
+   function right() {
+       if($(this).hasClass("n")){
+           return;
+       }
+       if(!$(this).hasClass("flag")){
+           $(this).addClass("flag");
+           nu--;
+           if(nu==0){
+               if($(".flag").filter(".lei").length==10){
+                   alert("成功");
+                   location.replace(document.referrer);
+               }
+           }
+       }else if($(this).hasClass("flag")){
+           $(this).removeClass("flag");
+          nu++;
+       }
+    }
+   $(document).on("contextmenu",function (e) {
+       e.preventDefault();
+   $.fn.expand({totop:function (time) {
+       this.click(function () {
+           $("html","body").animate({scrollTop:0})
+       })
+   }})
+   })
+</script>
+</html>

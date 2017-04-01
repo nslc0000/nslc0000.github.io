@@ -58,7 +58,7 @@
     bottom:50px;
     z-index: 200;
     overflow: hidden;
-    transition: all 0.5s;
+    transition: all 300ms;
 }
 .bool1{
     display: block;

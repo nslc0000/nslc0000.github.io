@@ -7,9 +7,9 @@ a{text-decoration: none;padding: 0;
 margin: 0; color:#808080;}
 
 body{ font-size: 12px;
-      font-family: "宋体";
+      font-family: "微软雅黑";
       position: relative;
-
+      margin: 0;
      }
 
 
@@ -471,6 +471,7 @@ text-align: center;
   bottom: 261px;
   background: url(../images/focus_lr0918.png) -60px -5px;
     z-index: 3;
+    cursor: pointer;
 }
 .jiantuoyou{
   width: 18px;
@@ -481,6 +482,7 @@ text-align: center;
   bottom: 261px;
   background: url(../images/focus_lr0918.png)  -3px -5px;
     z-index: 3;
+    cursor: pointer;
 }
 .jiantuozuo:hover{background: url(../images/focus_lr0918.png) -60px -66px;
 }

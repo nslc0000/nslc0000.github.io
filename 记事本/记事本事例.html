@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body,input{
+            margin:0;
+            padding:0;
+            border:0;
+            outline: 0;
+            /*font-family: 楷体;*/
+        }
+        .box{
+            width:100%;
+            height:50px;
+            font-size: 30px;
+            color: #ff0922;
+            font-weight: bolder;
+            line-height: 48px;
+            padding-left:280px;
+        }
+        .botton{
+            width:100%;
+            height:50px;
+            margin:0 auto;
+        }
+        .input{
+            height:50px;
+            width:630px;
+            float: left;
+            line-height: 60px;
+            font-size: 24px;
+            background:#ddd;
+        }
+        .input1{
+            height:50px;
+            width:auto;
+            background: #ccc;
+            padding:0 10px;
+            font-size: 16px;
+            color: #000;
+            font-weight:bolder;
+            background: #4c95ff;
+            cursor: pointer;
+        }
+        .input1:hover{
+            background: #ff464f;
+        }
+        .content{
+            background: #f2f2f2;
+            width: 100%;
+            height:auto;
+            flex-grow: 1;
+            overflow: hidden;
+            position: relative;
+        }
+        .left{
+            width:50%;
+            min-height:800px;
+            background: #cdffc0;
+            float: left;
+            padding:20px;
+        }
+        .right{
+            width:50%;
+            min-height:800px;
+            background: #2dff46;
+            float: left;
+            padding:20px;
+        }
+        .low{
+            width:100%;
+            height:30px;
+            color: #333;
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom:10px;
+        }
+        .low1{
+            float: right;
+        }
+        .low1 span{
+            color: red;
+            font-weight: bolder;
+        }
+        .inner{
+            position: relative;
+            width:100%;
+            height:auto;
+            display: flex;
+            flex-direction: row;
+            padding-left:25px;
+            padding-right:20px;
+            padding-bottom:20px;
+            /*overflow: hidden;*/
+        }
+        .inner:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .input2{
+            position: absolute;
+            width:20px;
+            height:20px;
+            margin-right: 5px;
+            top:0;
+            left:0;
+        }
+        .input3{
+            display: block;
+            width:100%;
+            height:auto;
+            background: none;
+            word-break: break-all;
+        }
+        .input3:focus{
+            outline: 1px solid #8aff15;
+            background: #ded1b0;
+        }
+        .time{
+            position: absolute;
+            display: block;
+            margin-top:25px;
+            float: right;
+            color: red;
+            font-size: 14px;
+            font-weight: 700;
+            bottom:0;
+            right:0;
+        }
+        .tijiao{
+            position:absolute;
+            width:40px;
+            height:40px;
+            bottom:20px;
+            left:22%;
+            background: #ff4280;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tijiao1{
+            position:absolute;
+            width:40px;
+            height:40px;
+            bottom:20px;
+            right:22%;
+            background: #ff4280;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .xing{
+            width:10px;
+            height:10px;
+            position: absolute;
+            top:5px;
+            right:5px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+        .active{
+            background: red;
+        }
+    </style>
+    <script>
+        //reWrite() 重新绘制整个内容区域心烦、
+//        getData()  从localStorage中获取数据
+//        saveData()向localStorage中保存数据
+//        changeState()修改某一条数据的已完成状态
+//        del()修改某一条数据是否被删除状态
+//        time（）将毫秒数据处理为年月日时分秒的数据
+//        changeStatr（）修改星标的状态
+//        changeContent（）修改内容
+//        btn.onclick（）提交输入框的内容
+//        update.onclick 重回当前页面  完成已完成状态
+            window.onload=function () {
+            var input=document.querySelector(".input");
+            var input1=document.querySelector(".input1");
+            var left=document.querySelector(".left");
+            var right=document.querySelector(".right");
+            var tijiao=document.querySelector(".tijiao");
+            var tijiao1=document.querySelector(".tijiao1");
+            function getdata() {
+                if(!localStorage.student){
+                    return [];
+                }else{
+                    var data=localStorage.student;
+                    data=JSON.parse(data);
+                    return data;
+                }
+            }
+            function setdate(data) {
+                localStorage.student=JSON.stringify(data);
+            }
+            input1.onclick=function () {
+               var data=getdata();
+               var val=input.innerHTML;
+                input.innerHTML="";
+                if(val==""){
+                    alert("请输入内容！");
+                    return;
+                }
+                var date=new Date();
+                var time=date.getTime();
+               data.push({content:val,time,done:false,xing:false,del:false});
+               setdate(data);
+                rewrite();
+            };
+            function time(t){
+                var date=new Date();
+                date.setTime(t);
+                return date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()+" "+
+                        date.getHours()+":"+date.getMinutes();
+            }
+            window.changeState=function(ele){
+                var data=getdata();
+                var index=ele.parentNode.id;
+                data[index].done=!data[index].done;
+                setdate(data);
+            };
+            window.changeDel=function(ele){
+                var data=getdata();
+                var index=ele.parentNode.id;
+                data[index].del=!data[index].del;
+                setdate(data);
+            };
+             window.changeStar=function(ele){
+                var data=getdata();
+                var index=ele.parentNode.id;
+                data[index].xing=!data[index].xing;
+                setdate(data);
+                 rewrite();
+            };
+            tijiao.onclick=function(){
+                rewrite();
+            };
+            tijiao1.onclick=function(){
+                var data=getdata();
+                data=data.filter(function(v){
+                    if(v.del==false){
+                        return true;
+                    }
+                });
+                setdate(data);
+                rewrite();
+            };
+            window.changeContent=function(ele){
+                var data=getdata();
+                var index=ele.parentNode.id;
+                data[index].content=ele.innerHTML;
+                setdate(data);
+            };
+            function rewrite() {
+                left.innerHTML="";
+                right.innerHTML="";
+                var data=getdata();
+                var str1="",str2="",num1=0,num2=0;
+                data.forEach(function (ele,i) {
+                    if(ele.done==false){
+                        num1++;
+                        str1+=` <div class="inner" id="${i}">
+                                      <input type="checkbox" class="input2" onclick="changeState(this)">
+                                      <div class="input3" onblur="changeContent(this)" contenteditable="true">${ele.content}</div>
+                                   <div class="time">${time(ele.time)}</div>`;
+                        if(ele.xing){
+                            str1+=`<div class="xing active" onclick="changeStar(this)"></div></div>`
+                        }else{
+                            str1+=`<div class="xing" onclick="changeStar(this)"></div></div>`
+                        }
+                    }else{
+                        num2++;
+                        str2+=` <div class="inner" id="${i}">
+                                      <input type="checkbox" class="input2" onclick="changeDel(this)">
+                                      <div class="input3">${ele.content}</div>
+                                   <div class="time">${time(ele.time)}</div>`;
+                        if(ele.xing){
+                            str2+=`<div class="xing active" onclick="changeStar(this)"></div></div>`
+                        }else{
+                            str2+=`<div class="xing" onclick="changeStar(this)"></div></div>`
+                        }
+                    }
+                });
+                str1=`<div class="low">未完成
+                    <div class="low1">共<span>${num1}</span>条</div>
+                </div>`+str1;
+                str2=`<div class="low">已完成
+                    <div class="low1">共<span>${num2}</span>条</div>
+                </div>`+str2;
+                left.innerHTML=str1;
+                right.innerHTML=str2;
+            }
+            rewrite();
+        }
+    </script>
+</head>
+<body>
+<div class="box">
+    记事本
+</div>
+<div class="botton">
+    <div contenteditable='true' class="input"></div>
+    <input type="button" value="提交" class="input1">
+</div>
+<div class="content">
+    <div class="left">
+        <div class="low">未完成
+        <div class="low1">共<span>0</span>条</div>
+        </div>
+    </div>
+    <div class="right"></div>
+    <div class="tijiao">更新</div>
+    <div class="tijiao1">清除</div>
+</div>
+</body>
+</html>

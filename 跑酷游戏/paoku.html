@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            display: block;
+            margin:0 auto;
+            background: url("img/image1.jpg");
+            background-size: auto 100%;
+        }
+        .box{
+            width: 100px;height: 30px;
+            line-height: 30px;
+            background: #ccc;
+            border-radius: 15px;
+            padding-left: 10px;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">得分：<span></span></div>
+<canvas width="800" height="400"></canvas>
+<img src="img/s1.png" alt="" class="img" hidden>
+<img src="img/s2.png" alt="" class="img" hidden>
+<img src="img/s3.png" alt="" class="img" hidden>
+<img src="img/p1.png" alt="" class="p" hidden>
+<img src="img/p2.png" alt="" class="p" hidden>
+<img src="img/p3.png" alt="" class="p" hidden>
+<img src="img/p4.png" alt="" class="p" hidden>
+<img src="img/p5.png" alt="" class="p" hidden>
+<img src="img/p6.png" alt="" class="p" hidden>
+<img src="img/p7.png" alt="" class="p" hidden>
+<img src="img/p8.png" alt="" class="p" hidden>
+<img src="img/p9.png" alt="" class="p" hidden>
+<script src="paoku.js"></script>
+<script>
+    var canvas=document.querySelector("canvas");
+    var sp=document.querySelector("span");
+    function Obstacle(canvas,num) {
+        this.canvas=canvas;
+        this.obj=this.canvas.getContext("2d");
+        this.imgage=document.querySelectorAll(".img");
+        this.num=num;
+        this.x=canvas.width;
+        this.y=300;
+        this.width=60;
+        this.height=60;
+    }
+    Obstacle.prototype={
+        draw:function () {
+            this.obj.drawImage(this.imgage[this.num],this.x,300,60,60);
+        },
+        update:function () {
+            this.x-=5;
+            this.draw();
+        }
+    };
+    function Person(canvas) {
+        this.canvas=canvas;
+        this.obj=this.canvas.getContext("2d");
+        this.imgage=document.querySelectorAll(".p");
+        this.img=0;
+        this.va1=30;
+        this.va2=0;
+        this.flg=false;
+        this.stare();
+        this.x=50;
+        this.y=260-this.va2;
+        this.width=100;
+        this.height=100;
+    }
+    Person.prototype={
+        draw:function () {
+            this.obj.drawImage(this.imgage[this.img],50,260-this.va2,100,100);
+        },
+        update:function (num) {
+            this.img=Math.floor(num/4)%this.imgage.length;
+            if(this.flg){
+                this.img=2;
+               if(num%2==0){
+                   this.va1-=3;
+                   this.va2+=this.va1;
+                   if(this.va2<=0){
+                       this.va1=30;
+                       this.va2=0;
+                       this.flg=false;
+                   }
+               }
+            }this.draw();
+        },
+        stare:function () {
+            this.canvas.onclick=function () {
+                this.flg=true;
+            }.bind(this);
+        }
+
+    };
+    function Game(canvas) {
+        this.canvas=canvas;
+        this.obj=this.canvas.getContext("2d");
+        this.frame=0;
+        this.obstacle=[];
+        this.person=new Person(canvas);
+        this.set=200;
+        this.flgs="play";
+    }
+    Game.prototype={
+        updatescence:function () {
+            canvas.style.backgroundPosition=-this.frame*5+"px 0";
+        },
+        updateobstacle:function () {
+           if(this.frame==this.set){
+               this.set+=Math.floor(Math.random()*150)+50;
+               var num=Math.floor(Math.random()*3);
+               var obstacle=new Obstacle(this.canvas,num);
+               this.obstacle.push(obstacle);
+               if(this.obstacle.length>4){
+                   this.obstacle[0]=null;
+                   this.obstacle.shift();
+               }
+           }
+            this.obstacle.forEach(function (v) {
+                v.update();
+                if(hitPix(this.canvas,this.person,v)){
+                    this.flgs="p";
+                }
+            }.bind(this)
+            )
+        },
+        updateperson:function () {
+            this.person.update(this.frame)
+        },
+        update:function () {
+            this.frame++;
+            if(this.flgs=="p"){
+                alert("你的得分是:"+this.frame+"" +
+                          '\n游戏结束，刷新重新开始');
+                return;
+            }
+            this.updatescence();
+            this.obj.clearRect(0,0,this.canvas.width,this.canvas.height);
+            this.updateobstacle();
+            this.updateperson();
+            requestAnimationFrame(this.update.bind(this));
+            sp.innerHTML=this.frame;
+        }
+    };
+    new Game(canvas).update();
+</script>
+</body>
+</html>
