@@ -1,0 +1,71 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" href="css/xiangying.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/show.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/index.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/Angular.js"></script>
+    <script src="js/santiize.js"></script>
+    <script src="js/route.js"></script>
+    <script src="js/seriver.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/mian.js"></script>
+    <title>知乎日报</title>
+</head>
+
+<body>
+<div class="sy_all"></div>
+<!--顶部开始-->
+<div class="top">
+    <a class="navdj iconfont">&#xe61a;</a>
+    <titles ti="{{data.name}}"></titles>
+    <a class="set iconfont">&#xe604;</a>
+    <div class="sy_select">
+        <div>白天模式</div>
+        <div id="day">夜间模式</div>
+    </div>
+</div>
+<!--顶部结束-->
+<!--左侧导航开始-->
+<div class="nav">
+    <div class="login">
+        <img src="images/login.png" alt="">
+        <span>请登录</span>
+    </div>
+    <div class="mine">
+        <div class="minel">
+            <p class="iconfont">&#xe652;</p>
+            <span>我的收藏</span>
+        </div>
+        <div class="miner">
+            <p class="iconfont">&#xe603;</p>
+            <span>离线下载</span>
+        </div>
+    </div>
+    <div class="indexp">
+        <p class="iconfont">&#xe632;</p>
+        <a href="#!/"><span>首页</span></a>
+    </div>
+    <div class="navlist">
+        <ul>
+            <li ng-repeat="v in newdata">
+                    <a href="#!/list/{{v.id}}"><span>{{v.name}}</span></a>
+                    <p class="iconfont">&#xe676;</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--左侧导航结束-->
+<!--index start-->
+ <div ng-view></div>
+<!--index end-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!--内容展示开始-->
+<div class="tupianzt">
+    <div class="tupian">
+        <img src="{{data.background}}" alt="">
+        <titles ti="{{data.description}}"></titles>
+    </div>
+</div>
+<!--内容开始-->
+<div class="container">
+    <!--内容整体标题开始-->
+      <titles ti="{{data.name}}"></titles>
+    <!--内容整体标题结束-->
+     <indexlist ng-repeat="v in data.stories" ta="{title:v.title,images:v.images,id:v.id}"></indexlist>
+</div>
+<!--内容展示结束-->

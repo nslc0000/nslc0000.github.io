@@ -1,0 +1,22 @@
+<div class="swiper-container">
+    <div class="swiper-wrapper banner">
+    <whell ng-repeat="v in data" data="{title:v.title,images:v.images,id:v.id}"></whell>
+ </div>
+    <div class="swiper-pagination"></div>
+</div>
+<!--内容开始-->
+<div class="container" style="margin-top: 0">
+    <!--内容整体标题开始-->
+    <div class="contitle" style="margin-top:0.45rem;">
+        <span>今日热闻</span>
+    </div>
+    <!--内容整体标题结束-->
+     <indexlist ng-repeat="v in listdata" ta="{images:v.images,title:v.title,id:v.id}"></indexlist>
+
+
+
+
+</div>
+
+<!--内容结束-->
+
