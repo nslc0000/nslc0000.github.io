@@ -7,5 +7,4 @@ dir.directive('showright',function(){
             data:"="
         }
     }
-
 })

@@ -41,7 +41,5 @@ service.factory('$name',function($http,$q){
             })
             return def.promise;
         },
-        
     }
-    
 })
