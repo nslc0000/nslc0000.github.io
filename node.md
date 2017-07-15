@@ -11,3 +11,38 @@ js特性
 3.简单
 4.动态性
 5.优秀的跨平台特性。
+兼容性问题
+	1.css
+	2.js
+跨域问题
+	1.JSONP
+	2.代理
+	3.PHP端修改header
+数据类型
+1.基本类型
+	1)string
+	2)number
+	3)boolean
+	4)undefined
+	5)null
+2.混合类型
+	object
+判断数据类型
+	1.typeof方法
+	2.Object.prototype.toString.call()
+	3.instanceOf
+
+字符串方法
+1.charCodeAt方法返回一个整数，代表指定位置字符的Unicode编码。
+2.fromCharCode方法从一些Unicode字符串中返回一个字符串。
+3.charAt方法返回指定索引位置处的字符。如果超出有效范围的索引值返回空字符串。 
+4.slice方法返回字符串的片段。
+5.substring方法返回位于String对象中指定位置的子字符串。 
+6.substr方法返回一个从指定位置开始的指定长度的子字符串。
+7.indexOf方法放回String对象内第一次出现子字符串位置。如果没有找到子字符串，则返回-1。
+8.lastIndexOf方法返回String对象中字符串最后出现的位置。如果没有匹配到子字符串，则返回-1。 
+9.search方法返回与正则表达式查找内容匹配的第一个字符串的位置。 
+10.concat方法返回字符串值，该值包含了两个或多个提供的字符串的连接。 
+11.将一个字符串分割为子字符串，然后将结果作为字符串数组返回。
+12.toLowerCase方法返回一个字符串，该字符串中的字母被转换成小写。
+13.toUpperCase方法返回一个字符串，该字符串中的所有字母都被转换为大写字母。  
